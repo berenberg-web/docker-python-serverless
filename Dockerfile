@@ -1,7 +1,5 @@
 FROM python:3.6.1
 
-COPY docker/ /
-
 ENV SERVERLESS_VERSION=1.15.3
 
 RUN curl -sL https://deb.nodesource.com/setup_8.x | bash \
