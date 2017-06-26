@@ -1,6 +1,6 @@
 FROM python:3.6.1
 
-ENV SERVERLESS_VERSION=1.15.3
+ENV SERVERLESS_VERSION=1.16.1
 
 RUN curl -sL https://deb.nodesource.com/setup_8.x | bash \
  && apt-get update -qq \
@@ -10,6 +10,7 @@ RUN curl -sL https://deb.nodesource.com/setup_8.x | bash \
     serverless@${SERVERLESS_VERSION} \
  && pip install \
     boto3 \
+    pylint \
  && apt-get clean autoclean \
  && apt-get autoremove --yes \
  && rm -rf /var/lib/{apt,dpkg,cache,log}/
